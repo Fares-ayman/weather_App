@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build runner task",
+            "type": "shell",
+            // Assign output file name with VSCode inner variables like ${fileBasename}
+            "command": "source ~/.zshrc; dart run build_runner build -d --build-filter='${relativeFileDirname}/${fileBasenameNoExtension}.g.dart'",
+            "options": {},
+            // "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "build test mocks task",
+            "type": "shell",
+            // Assign output file name with VSCode inner variables like ${fileBasename}
+            "command": "source ~/.zshrc; dart run build_runner build -d --build-filter='${relativeFileDirname}/${fileBasenameNoExtension}.mocks.dart'",
+            "options": {},
+            // "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        }
+    ]
+}
