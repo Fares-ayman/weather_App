@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,47 +39,34 @@ class HomeWeatherWidget extends StatelessWidget {
               ),
               Row(
                 children: [
-                  SizedBox(
-                    height: AppSize.s30.h,
-                    width: AppSize.s30.w,
-                    child: IconButton(
-                      icon: InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(
-                              context, AppRoutesName.searchPage);
-                        },
-                        child: Icon(
-                          Icons.search,
-                          size: AppSize.s20,
-                          color: AppColor.white,
-                        ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, AppRoutesName.searchPage);
+                    },
+                    child: SizedBox(
+                      height: AppSize.s40.h,
+                      width: AppSize.s40.w,
+                      child: Icon(
+                        Icons.search,
+                        size: AppSize.s20,
+                        color: AppColor.white,
                       ),
-                      onPressed: () {
-                        Navigator.pushNamed(context, AppRoutesName.searchPage);
-                      },
                     ),
                   ),
-                  SizedBox(
-                    height: AppSize.s30.h,
-                    width: AppSize.s30.w,
-                    child: IconButton(
-                      icon: InkWell(
-                        onTap: () {
-                          context.read<WeatherBloc>().add(
-                                const GetWeatherByLocation(),
-                              );
-                        },
-                        child: Icon(
-                          Icons.location_on,
-                          size: AppSize.s20,
-                          color: AppColor.white,
-                        ),
+                  InkWell(
+                    onTap: () {
+                      context.read<WeatherBloc>().add(
+                            const GetWeatherByLocation(),
+                          );
+                    },
+                    child: SizedBox(
+                      height: AppSize.s40.h,
+                      width: AppSize.s40.w,
+                      child: Icon(
+                        Icons.location_on,
+                        size: AppSize.s20,
+                        color: AppColor.white,
                       ),
-                      onPressed: () {
-                        context.read<WeatherBloc>().add(
-                              const GetWeatherByLocation(),
-                            );
-                      },
                     ),
                   ),
                 ],
