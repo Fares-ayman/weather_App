@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_template/core/resourses/color_manager.dart';
 import 'package:flutter_template/core/resourses/values_manager.dart';
 
-// ignore: must_be_immutable
 class AppProgressButton extends StatefulWidget {
   final String? text;
   final TextStyle textStyle;
@@ -22,7 +21,7 @@ class AppProgressButton extends StatefulWidget {
   final EdgeInsets? padding;
   final Function(AnimationController animationController)? onPressed;
 
-  AppProgressButton({
+  const AppProgressButton({
     Key? key,
     required this.onPressed,
     this.text,
@@ -145,7 +144,7 @@ class AppProgressButtonState extends State<AppProgressButton>
               : FittedBox(
                   child: widget.child ??
                       Text(
-                        textScaler: TextScaler.linear(1.0),
+                        textScaler: const TextScaler.linear(1.0),
                         widget.text ?? 'Click Me',
                         style: widget.textStyle,
                       ),

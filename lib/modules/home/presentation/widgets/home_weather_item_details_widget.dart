@@ -25,8 +25,8 @@ class HomeWeatherItemDetailsWidget extends StatelessWidget {
           children: [
             Text(
               title,
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
+              style: const TextStyle(
+                  color: Colors.white, fontWeight: FontWeight.w300),
             ),
             const SizedBox(height: 3),
             Text(

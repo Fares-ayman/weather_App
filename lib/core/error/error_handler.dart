@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:dio/dio.dart';
 import 'package:flutter_template/core/error/failures.dart';
 import 'package:flutter_template/core/resourses/strings_manager.dart';

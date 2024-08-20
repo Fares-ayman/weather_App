@@ -7,8 +7,8 @@ void main() {
       'Get Weather By Location',
       () async {
         expect(
-          GetWeatherByLocation(),
-          GetWeatherByLocation(),
+          const GetWeatherByLocation(),
+          const GetWeatherByLocation(),
         );
       },
     );
@@ -16,8 +16,8 @@ void main() {
       'Get Weather By city name',
       () async {
         expect(
-          GetWeatherByCityName("paris").props,
-          GetWeatherByCityName("paris").props,
+          const GetWeatherByCityName("paris").props,
+          const GetWeatherByCityName("paris").props,
         );
       },
     );
